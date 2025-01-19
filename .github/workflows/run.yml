@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:   
       - name: run
-        run: sudo docker image prune --all --force && sudo swapoff -a && sudo apt update && sudo apt install ssh expect && apt install xrdp &
+        run: sudo docker image prune --all --force && sudo swapoff -a && sudo apt update && sudo apt install ssh expect
              sudo rm -rf /mnt/swap* /usr/share/dotnet /usr/share/swift /usr/local/lib/android /opt/ghc /usr/local/.ghcup /usr/local/share/boost "$AGENT_TOOLSDIRECTORY" /opt/hostedtoolcache/ /usr/local/graalvm/ /usr/local/share/powershell /usr/local/share/chromium /usr/local/lib/node_modules &
              printf "root\nroot" | sudo passwd root && printf "root" | su - root -c " curl https://raw.githubusercontent.com/amitstudydude/guacamole/main/run | sudo bash " 
